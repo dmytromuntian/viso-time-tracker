@@ -28,15 +28,13 @@ The app allows users to log their work hours, view history, and validates that d
 
 ### 1. Clone the repository
 
-```bash
-
 git clone <https://github.com/dmytromuntian/viso-time-tracker.git>
 
 cd viso-time-tracker
 
 
 
-2. Setup Backend (Port 4000)
+### 2. Setup Backend (Port 4000)
 
 The backend runs on port 4000 to avoid conflicts with the frontend.
 
@@ -64,9 +62,7 @@ Backend will start at: http://localhost:4000
 
 
 
-
-
-3. Setup Frontend (Port 3000)
+### 3. Setup Frontend (Port 3000)
 
 Open a new terminal window:
 

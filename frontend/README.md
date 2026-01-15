@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Viso Time Tracker
 
-## Getting Started
 
-First, run the development server:
+
+A simplified time tracking application built with **NestJS** and **Next.js**.
+
+The app allows users to log their work hours, view history, and validates that daily entries do not exceed 24 hours.
+
+
+
+## 🛠 Tech Stack
+
+
+
+- **Backend:** NestJS, Prisma ORM, SQLite
+
+- **Frontend:** Next.js (App Router), Tailwind CSS, React Query
+
+- **Validation:** class-validator, React Hook Form
+
+- **State Management:** TanStack Query
+
+
+
+## How to Run
+
+
+
+### 1. Clone the repository
 
 ```bash
+
+git clone <https://github.com/dmytromuntian/viso-time-tracker.git>
+
+cd viso-time-tracker
+
+
+
+2. Setup Backend (Port 4000)
+
+The backend runs on port 4000 to avoid conflicts with the frontend.
+
+
+
+cd backend
+
+npm install
+
+
+
+# Initialize SQLite database
+
+npx prisma db push
+
+
+
+# Start the server
+
+npm run start:dev
+
+
+
+Backend will start at: http://localhost:4000
+
+
+
+
+
+3. Setup Frontend (Port 3000)
+
+Open a new terminal window:
+
+
+
+cd frontend
+
+npm install
+
+
+
+# Start the development server
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Frontend will start at: http://localhost:3000
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+✅ Features Implemented
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[x] Time Logging: Users can add entries with date, project, description, and hours.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+[x] Validation: Server-side check prevents logging more than 24 hours per day.
+
+
+
+[x] History: Displays grouped list of time entries ordered by date.
+
+
+
+[x] Persistence: Data is stored in a local SQLite database.
+
+
+
+[x] UI/UX: Clean interface with Tailwind CSS and form reset functionality.
